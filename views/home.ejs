@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home</title>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs'); -%>
+    <h1>Home</h1>
+    
+    <p><%=content%></p>
+ <%   for(var i=0;i<posts.length;i++){%>
+
+
+    <h1><%=posts[i].title%></h1>
+    <p><%=posts[i].content.substring(0,100)+"..."%></p>
+    <a href="/posts/<%=posts[i].title%>">Read more</a>
+    <%  } %>
+
+        <!-- console.log(post.item); -->
+     
+
+    <%- include('partials/footer.ejs');-%>
+</body>
+
+</html>
+     <!-- posts.forEach(function(post
